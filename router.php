@@ -3,11 +3,8 @@
     require_once 'libs/router.php';
 
     require_once 'app/controllers/books.api.controller.php';
-    // require_once 'app/controllers/user.api.controller.php';
-    // require_once 'app/middlewares/jwt.auth.middleware.php';
-    $router = new Router();
 
-    // $router->addMiddleware(new JWTAuthMiddleware());
+    $router = new Router();
 
     #                 endpoint                   verbo      controller               metodo
     $router->addRoute('libros'      ,            'GET',     'BooksApiController',   'getAll');
