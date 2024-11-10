@@ -2,7 +2,7 @@
     
     require_once 'libs/router.php';
 
-    require_once 'app/controllers/books.api.controller.php';
+    require_once 'app/controller/books.api.controller.php';
 
     $router = new Router();
 
