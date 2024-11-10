@@ -16,12 +16,18 @@ Diagrama de tablas
 ![Captura web_20-10-2024_193820_localhost](https://github.com/user-attachments/assets/0aafb821-8f59-4bb9-97d6-47098f9dc0fc)
 
 Libros
-GET tpe3-api-rest/api/libros
+
+GET 
+
+tpe3-api-rest/api/libros
 Devuelve todos los libros cargados en la base de datos, odenados por el ID genero
 
-GET tpe3-api-rest/api/libros/:ID
+GET 
+tpe3-api-rest/api/libros/:ID
 Devuelve el libro correspondiente al ID solicitado.
-POST tpe3-api-rest/api/libros
+
+POST
+tpe3-api-rest/api/libros
 Inserta un nuevo libro con los datos proporcionados en el cuerpo de la solicitud (en formato JSON).
 Campos requeridos:
   Titulo: Titulo del libro
