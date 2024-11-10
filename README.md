@@ -5,7 +5,7 @@ Chaile, Gisele DNI:35333906
 
 
 Descripción del TPE
-
+Biblioteca virtual donde se relacionan dos tablas (libros-genero) mediante el género de cada libro.
 
 URL de Ejemplo
 tpe3-api-rest/api/libros
@@ -42,10 +42,10 @@ Campos requeridos:
 
 Ejemplo de json a insertar:
       {
-        "titulo": "Nuevo Título",
-        "autor": "Nuevo Autor",
-        "reseña": "Nueva Reseña",
-        "año": 2023,
+        "Titulo": "Nuevo Título",
+        "Autor": "Nuevo Autor",
+        "Reseña": "Nueva Reseña",
+        "Año": 2023,
         "ID_genero": 3
       }
 
