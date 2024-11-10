@@ -1,6 +1,6 @@
 <?php
-require_once './app/models/books.model.php';
-require_once './app/views/json.view.php';
+require_once './app/model/books.model.php';
+require_once './app/view/json.view.php';
 
 class BooksApiController {
     private $model;
