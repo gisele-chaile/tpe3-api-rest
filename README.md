@@ -22,12 +22,16 @@ tpe3-api-rest/api/libros
 Devuelve todos los libros cargados en la base de datos, odenados por el ID genero
 
 GET 
+
 tpe3-api-rest/api/libros/:ID
 Devuelve el libro correspondiente al ID solicitado.
 
 POST
+
 tpe3-api-rest/api/libros
 Inserta un nuevo libro con los datos proporcionados en el cuerpo de la solicitud (en formato JSON).
+
+
 Campos requeridos:
   Titulo: Titulo del libro
   Autor: Autor del libro
@@ -35,6 +39,7 @@ Campos requeridos:
   Año: Año de publicacion del libro
   ID_genero: genero del libro
   
+
 Ejemplo de json a insertar:
       {
         "titulo": "Nuevo Título",
@@ -43,11 +48,18 @@ Ejemplo de json a insertar:
         "año": 2023,
         "ID_genero": 3
       }
+
 PUT tpe3-api-rest/api/libros/:ID
+
 Modifica el libro que corresponde al ID solicitado. La información a modificar se envía en el cuerpo de la solicitud (en formato JSON).
+
 Campos que se pueden modificar:
   Titulo
   Autor
   Reseña
   Año
   ID_genero
+
+
+
+
