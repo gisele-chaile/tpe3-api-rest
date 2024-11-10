@@ -18,7 +18,6 @@ Diagrama de tablas
 Libros
 
 GET 
-
 tpe3-api-rest/api/libros
 Devuelve todos los libros cargados en la base de datos, odenados por el ID genero
 
