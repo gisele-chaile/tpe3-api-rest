@@ -25,7 +25,7 @@ class BooksApiController {
 
 
     // obtengo libro por id
-    public function get($req, $res) {
+    public function get($req) {
         // obtengo el id del libro desde la ruta
         $id = $req->params->id;
 
@@ -41,7 +41,7 @@ class BooksApiController {
     }
 
     // api/libros (POST)
-    public function create($req, $res) {
+    public function create($req) {
 
         // valido los datos
         if (empty($req->body->Titulo) || empty($req->body->Autor)|| empty($req->body->Reseña)|| empty($req->body->Año)) {
@@ -67,7 +67,7 @@ class BooksApiController {
     }
 
     // api/libros/:id (PUT)
-    public function update($req, $res) {
+    public function update($req) {
         $id = $req->params->id;
 
         // verifico que exista
