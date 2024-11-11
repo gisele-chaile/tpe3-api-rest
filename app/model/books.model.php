@@ -6,44 +6,38 @@ class BooksModel {
     public function __construct() {
        $this->db = new PDO('mysql:host=localhost;dbname=db_biblioteca;charset=utf8', 'root', '');
     }
-    //obtengo los libros ordenados por ID_genero
-    public function getBooks($orderBy = false, $sort = 'asc', $genero = null) {
-       
-        $sql = 'SELECT libros.*, genero.Nombre AS ID_genero FROM libros JOIN genero ON libros.ID_genero = genero.ID_genero';
-    
-        if ($genero != null) {
-            $sql .= " WHERE libros.ID_genero = $genero";
-        }
-        
-        if ($orderBy) {
+  
+    public function getBooks($orderBy = false) {
+        $sql = 'SELECT * FROM libros';
+
+        if($orderBy) {
             switch($orderBy) {
-                case 'Titulo':
+                case 'titulo':
                     $sql .= ' ORDER BY Titulo';
                     break;
-                case 'Autor':
+                case 'autor':
                     $sql .= ' ORDER BY Autor';
                     break;
-                case 'Reseña':
+                case 'reseña':
                     $sql .= ' ORDER BY Reseña';
                     break;
-                case 'Año':
+                case 'año':
                     $sql .= ' ORDER BY Año';
+                    break;
+                case 'genero':
+                    $sql .= ' ORDER BY ID_genero';
                     break;
             }
         }
-    
-        
-        if ($sort == 'asc' || $sort == 'desc') {
-            $sql .= " $sort";
-        }
-    
+
+        // 2. Ejecuto la consulta
         $query = $this->db->prepare($sql);
         $query->execute();
-        
-       
-        $books = $query->fetchAll(PDO::FETCH_OBJ); 
     
-        return $books;
+        // 3. Obtengo los datos en un arreglo de objetos
+        $libros = $query->fetchAll(PDO::FETCH_OBJ); 
+    
+        return $libros;
     }
  
     public function getBook($id) {    
