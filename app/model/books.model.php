@@ -18,14 +18,8 @@ class BooksModel {
                 case 'autor':
                     $sql .= ' ORDER BY Autor';
                     break;
-                case 'reseña':
-                    $sql .= ' ORDER BY Reseña';
-                    break;
                 case 'año':
                     $sql .= ' ORDER BY Año';
-                    break;
-                case 'genero':
-                    $sql .= ' ORDER BY ID_genero';
                     break;
             }
         }
