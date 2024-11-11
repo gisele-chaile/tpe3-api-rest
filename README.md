@@ -19,7 +19,7 @@ Libros
 
 GET 
 tpe3-api-rest/api/libros
-Devuelve todos los libros cargados en la base de datos, odenados por el ID genero
+Devuelve todos los libros cargados en la base de datos
 
 GET 
 
@@ -59,6 +59,19 @@ Campos que se pueden modificar:
   Reseña
   Año
   ID_genero
+
+Ordenamiento:
+orderBy: Campo por el que se desea ordenar los resultados. Los campos válidos son:
+
+Titulo: Ordena los productos por título.
+GET tpe3-api-rest/api/libros?orderBy=titulo
+
+Autor: Ordena los productos por autor
+GET tpe3-api-rest/api/libros?orderBy=autor
+
+Año: Ordena los productos por año.
+GET tpe3-api-rest/api/libros?orderBy=año
+
 
 
 
