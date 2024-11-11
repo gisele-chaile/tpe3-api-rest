@@ -10,21 +10,19 @@ class BooksApiController {
         $this->model = new BooksModel();
         $this->view = new JSONView();
     }
-    // obtengo todos los libros
-    public function getAll($req, $res) {
+    // /api/libros
+    public function getAll($req) {
+        
         $orderBy = false;
         if(isset($req->query->orderBy))
             $orderBy = $req->query->orderBy;
 
-        $genero = null;
-        if(isset($req->query->ID_genero)) {
-            $genero = $req->query->ID_genero;
-        }
-
-        $books = $this->model->getBooks($genero, $orderBy);
-
-        return $this->view->response($books);
+        $libros = $this->model->getBooks($orderBy);
+        
+        // mando las tareas a la vista
+        return $this->view->response($libros);
     }
+
 
     // obtengo libro por id
     public function get($req, $res) {
