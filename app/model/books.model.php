@@ -13,13 +13,13 @@ class BooksModel {
         if($orderBy) {
             switch($orderBy) {
                 case 'titulo':
-                    $sql .= ' ORDER BY Titulo';
+                    $sql .= ' ORDER BY Titulo DESC';
                     break;
                 case 'autor':
-                    $sql .= ' ORDER BY Autor';
+                    $sql .= ' ORDER BY Autor DESC';
                     break;
                 case 'año':
-                    $sql .= ' ORDER BY Año';
+                    $sql .= ' ORDER BY Año DESC';
                     break;
             }
         }
